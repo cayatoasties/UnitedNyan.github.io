@@ -30,9 +30,9 @@ function main() {
     <BrowserRouter>
     <Switch>
       
-      <Route path='/'>
+      {/* <Route path='/'> */}
         <App />
-      </Route>
+      {/* </Route> */}
       
       <Route path='/quiz'>
         <Quiz />
