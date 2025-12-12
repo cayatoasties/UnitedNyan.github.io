@@ -1,0 +1,23 @@
+body{
+    background-image: linear-gradient(90deg, #F4EEA9, #F4CBC6, #F4AFAB);
+    font-family: "Sour Gummy", sans-serif;
+    display: flex;         
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
+    margin: 0;                
+}
+.help1{
+    position: relative;
+    z-index: 3;
+    opacity: 0.5;
+}
+.help1:hover{
+    opacity: 1;
+}
+.help1:hover + .hidden-text{
+    opacity: 1;
+}
+.hidden-text{
+    opacity: 0;
+}
