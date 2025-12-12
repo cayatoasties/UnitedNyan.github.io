@@ -15,6 +15,7 @@ function page () {
         <p>Oh no, you are not supposed to get here. Naughty...</p>
         <p>how did you bug this thing??? is there a mouse running under your pc?</p>
         <p>hmmm dm me on discord @bloopl1ghtn1ng &#40;purely scientific purposes :&#41; &#41;</p>
+        <button className="button" onClick={()=>{window.location.href=window.location.origin}}>Back</button>
         </div>
         </div>
 )};

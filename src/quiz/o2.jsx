@@ -13,6 +13,7 @@ function page () {
         <h3>You are a Evil cat! Mwahahaha</h3>
         <p>you are proud to be called one of the most evil cats, use this site to gather your minions and take over the world!!!! &gt;:&#41;</p>
         <p>G00d LuCK with your EVILLL plans!</p>
+        <button className="button" onClick={()=>{window.location.href=window.location.origin}}>Back</button>
         </div>
 )};
 

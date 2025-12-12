@@ -1,7 +1,6 @@
 import React from 'react';
 import "./quiz.css";
 
-
 function page () {
 
     document.title="u r a HAPPY CAT!";
@@ -12,6 +11,7 @@ function page () {
         <br/>
         <h3>You are a happy cat!</h3>
         <p>constantly ready to make friends and having an optimistic outlook on life :&#41;</p>
+        <button className="button" onClick={()=>{window.location.href=window.location.origin}}>Back</button>
         </div>
 )};
 

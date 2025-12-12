@@ -4,11 +4,11 @@ import "./quiz.css";
 
 let i=0;
 let answer=0;
+let last_answer=answer;
 
 function page() {
 
     const score=[0,0,0];
-    let last_answer =0;
     const questions=
     [["when taking a big poop on the toilet, u were scrolling on ur phone and found a funny cat reel. when u lean back u fell into the toilet!!   whats ur first thought?","save me!! i need to change my clothes","its time to find some brownies","i will throw poop at other people"],
     ["in the toilet sewer u walked and found skibidi toilet, what do u do?","run away and cry","say hi to make a new friend","use a toilet brush to whack skibidi toilet"],
@@ -37,17 +37,19 @@ function page() {
     function update_score(answer) {
         score[answer-1]+=1;
         last_answer=answer;
+        console.log(last_answer)
     }
 
     function evalscore() {
-        console.log(score)
+        // console.log(score)
         let result=Math.max(...score);
         let rnum=score.indexOf(result)
         score.splice(1,rnum);
-        if (Math.max(score)==result){
-            return last_answer;
+        if (Math.max(...score)==result){
+            console.log("yeassssssssssssssssssssssssssssssssss")
+            return (last_answer-1);
         } else {
-            console.log(rnum)
+            // console.log(rnum)
             return rnum;
         }
     }
@@ -73,15 +75,15 @@ function page() {
         if(answer!=0){
             if (i<questions.length) {
                 console.log (questions.length)
-                console.log ("yay")
+                // console.log ("yay")
                 i+=1;
                 update_score(answer);
-                console.log(i);
+                // console.log(i);
             } 
             if (i==questions.length) {
                 let result=evalscore();
-                console.log("bloop");
-                console.log("b"+result);
+                // console.log("bloop");
+                // console.log("b"+result);
                 reroute(result);
             }
             
