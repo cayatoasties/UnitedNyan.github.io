@@ -1,6 +1,9 @@
 import React from 'react';
 import "./quiz.css";
 "use client"; 
+const NEON_CONNECTION = 'postgresql://neondb_owner:npg_XEGaxv5K8fsY@ep-holy-sunset-a188y1nh-pooler.ap-southeast-1.aws.neon.tech/chinook?sslmode=require&channel_binding=require';
+import { neon } from 'https://cdn.jsdelivr.net/npm/@neondatabase/serverless@1.0.2/+esm';
+const sql = neon(NEON_CONNECTION);
 
 let i=0;
 let answer=0;
@@ -17,6 +20,26 @@ function page() {
     let QUESTION = "", option_1 = "", option_2 = "", option_3 = "";
     document.title = "CAT QUIZ";
 
+    // --- START: STORE TAG FUNCTION ---
+    async function storeTag(tag) {
+        // Retrieve the username from local storage (set during login/signup)
+        const currentUserName = localStorage.getItem('loggedInUserName');
+        if (!currentUserName) {
+            console.warn("WARNING: Cannot store tag. No username found in local storage.");
+            return;
+        }
+        try {
+            await sql`
+                UPDATE Users 
+                SET Tag = ${tag}
+                WHERE Name = ${currentUserName};
+            `;
+            console.log(`Successfully updated tag to '${tag}' for user ${currentUserName}.`);
+        } catch (error) {
+            console.error("Error storing final tag in database:", error);
+        }
+    
+    //end
     function update_text(){
         let question= document.querySelector(".question");
         let one= document.querySelector(".one");
@@ -66,6 +89,7 @@ function page() {
             window.location.href = window.location.href+'/whaet?'
         }
     }
+        storeTag(tag);
 
     function button_please_work() {
         // //updates the text
