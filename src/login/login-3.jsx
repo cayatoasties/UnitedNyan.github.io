@@ -57,6 +57,7 @@ async function SignUp() {
             INSERT INTO Users (Name, Password, Tag)
             VALUES (${name}, ${password}, NULL);
         `;
+        localStorage.setItem('loggedInUserName', name);
         //pop up
         alert(`welcome ${name}!`);
         console.log("Insert result:", result);
@@ -92,6 +93,7 @@ async function LogIn() {
         `;
         //login successful
         if (user.length === 1) {
+            localStorage.setItem('loggedInUserName', name);
             alert(`hello ${name}!`);
             console.log("User data:", user[0]);
         //login unsuccessful
