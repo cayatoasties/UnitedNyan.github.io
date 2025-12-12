@@ -1,0 +1,49 @@
+.row {
+  display: flex; 
+  flex-direction: row;
+}
+
+.col {
+  display: flex; 
+  flex-direction: column;
+}
+
+.pad-9 {
+    padding:40% 
+
+}
+
+.background {
+  background-color: white;
+  color: maroon;
+  height:fit-content;
+  width: fit-content;
+  justify-content: center;
+  overflow-y:auto;
+  padding:5%;
+}
+
+.full {
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/030/807/753/small_2x/a-hacking-background-with-binary-and-hexdecimal-code-on-a-screen-video.jpg);
+  height: 100vh;
+  width: 100vw;
+}
+
+body{
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/030/807/753/small_2x/a-hacking-background-with-binary-and-hexdecimal-code-on-a-screen-video.jpg);
+
+}
+.fire-btn{
+    /* border: 1px black solid; */
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    transform: translateX(300px);
+    transform: translateY(300px);
+    color:pink;
+    background-color:maroon;
+}
+.fire-btn:hover{
+    background-color: rgb(56, 156, 56);
+}

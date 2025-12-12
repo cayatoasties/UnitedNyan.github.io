@@ -1,0 +1,54 @@
+.row {
+  display: flex; 
+  flex-direction: row;
+}
+
+.col {
+  display: flex; 
+  flex-direction: column;
+}
+
+.pad-9 {
+    padding:40% 
+
+}
+
+.fill{
+  max-height:100%;
+  max-width:100%;
+}
+
+.background {
+  background-color: white;
+  color: maroon;
+  height:fit-content;
+  width: fit-content;
+  justify-content: center;
+  padding:5%;
+}
+
+body{
+    background-image: linear-gradient(90deg, #744611, #96453a, #F4AFAB);
+
+}
+.fire-btn{
+    /* border: 1px black solid; */
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    transform: translateX(300px);
+    transform: translateY(300px);
+    color:pink;
+    background-color:maroon;
+    margin-bottom:10px;
+}
+.fire-btn:hover{
+    background-color: rgb(77, 19, 19);
+    color:rgb(218, 157, 167);
+}
+
+.button {
+    background-color: maroon;
+    color:rgb(255, 255, 255);
+}
