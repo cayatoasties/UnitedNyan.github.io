@@ -1,3 +1,18 @@
-HIIII YOUR MUTED 
-But we wanted to ask how to do routing
-and git :)
+<div className="row"> 
+            {/* ^setflex */}
+        <div className="col">
+            {/* <img scr=" "> */}
+            <h3 className="question">{questions[0][0]}</h3>
+            <div className="row">
+                <input type="radio" name="options" onClick={()=>{answer=1}}></input> 
+                <p className= "one">{questions[0][1]}</p>
+            </div> <div className="row">
+                <input type="radio" name="options" onClick={()=>{answer=2}}></input> 
+                <p className="two">{questions[0][2]}</p>
+            </div> <div className="row">
+                <input type="radio" name="options" onClick={()=>{answer=3}}></input> 
+                <p className="three">{questions[0][3]}</p>
+            </div>
+        </div>
+        <div className="fire-btn" onClick={please_work} >bloop</div>
+        </div>

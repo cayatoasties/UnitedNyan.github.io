@@ -1,0 +1,124 @@
+body{
+    background-image: linear-gradient(90deg, #F4EEA9, #F4CBC6, #F4AFAB);
+    font-family: "Sour Gummy", sans-serif;
+}
+.font{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+    transform: translateY(-40px);
+}
+.speech-frame{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 2;
+}
+.cat{
+    position: absolute;
+    left: 28%;
+    bottom:0px
+}
+.deets{
+    position: relative;
+    z-index: 5;
+    margin-left: 30%;
+}
+.first-row{
+    display: flex; flex-direction: row;
+}
+.help1{
+    position: absolute;
+    left: 42%;
+    top: 29%;
+    z-index: 3;
+    opacity: 0.5;
+}
+.help1:hover{
+    opacity: 1;
+}
+.help1:hover + .hidden-text{
+    opacity: 1;
+}
+.hidden-text{
+    position: absolute;
+    z-index: 3;
+    left: 44%;
+    top: 23%;
+    opacity: 0;
+}
+.deets-pw{
+    position: relative;
+    margin-left: 30%;
+    z-index: 3;
+}
+.help2{
+    position: absolute;
+    left: 42%;
+    z-index: 3;
+    top: 46%;
+    opacity: 0.5;
+}
+.hidden-text-below{
+    position: absolute;
+    z-index: 3;
+    left: 44%;
+    top: 44%;
+    opacity: 0;
+}
+.help2:hover{
+    opacity: 1;
+}
+.help2:hover + .hidden-text-below{
+    opacity: 1;
+}
+.vine-btn{
+    border: 2px black solid;
+    border-radius: 15px;
+    padding: 10px;
+    position: absolute;
+    z-index: 4;
+    background-color: rgb(188, 212, 152);
+    left: 65%;
+    top: 33%;
+}
+.vine-btn:hover{
+    background-color: rgb(56, 156, 56);
+}
+.vine-btn2{
+    border: 2px black solid;
+    border-radius: 15px;
+    padding: 10px;
+    position: absolute;
+    z-index: 3;
+    background-color: rgb(188, 212, 152);
+    left: 65%;
+    top: 40%;
+}
+.vine-btn2:hover{
+    background-color: rgb(56, 156, 56);
+}
+table{
+    text-align: center;
+    transform: translate(40px, -80px);
+    border: 3px, #5B4636, solid;
+    border-collapse: separate;
+    border-radius: 20px;
+    padding: 10px;
+}
+button{
+    border-radius: 10px;
+    background-color: #d7d6d6;
+}
+#username{
+    position: absolute;
+    z-index: 7;
+    left: 44%;
+    top: 33%;
+}
+#password{
+    position: absolute;
+    z-index: 7;
+    left: 44%;
+    top: 42%;
+}

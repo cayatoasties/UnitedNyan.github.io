@@ -1,0 +1,31 @@
+.row {
+  display: flex; 
+  flex-direction: row;
+}
+
+.col {
+  display: flex; 
+  flex-direction: column;
+}
+
+.pad-9 {
+    padding:40% 
+
+}
+
+body{
+    background-image: linear-gradient(90deg, #F4EEA9, #F4CBC6, #F4AFAB);
+}
+.fire-btn{
+    border: 1px black solid;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    transform: translateX(300px);
+    transform: translateY(300px);
+    background-color: rgb(188, 212, 152);
+}
+.fire-btn:hover{
+    background-color: rgb(56, 156, 56);
+}
