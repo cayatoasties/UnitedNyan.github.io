@@ -9,7 +9,10 @@ function page() {
 
     const score=[0,0,0];
     let last_answer =0;
-    const questions=[["1?","1a","1b","1c"],["2?","2a","2b","2c"],["3?","3a","3b","3c"]];
+    const questions=
+    [["when taking a big poop on the toilet, u were scrolling on ur phone and found a funny cat reel. when u lean back u fell into the toilet!!   whats ur first thought?","save me!! i need to change my clothes","its time to find some brownies","i will throw poop at other people"],
+    ["in the toilet sewer u walked and found skibidi toilet, what do u do?","run away and cry","say hi to make a new friend","use a toilet brush to whack skibidi toilet"],
+    ["Skibidi toilet says: lemme bring you somewhere   *Gets teleported into outer space*   U find that the world is sick, what do you do:","ask skibidi toilet why is this happening","call your friend and come up with a plan to save the world","go knock on thanos’ door"]];
 
     let QUESTION = "", option_1 = "", option_2 = "", option_3 = "";
     document.title = "CAT QUIZ";
@@ -49,9 +52,17 @@ function page() {
         }
     }
 
-    function reroute() {
-        window.location.href = "http://localhost:5173/"
-
+    function reroute(result) {
+        console.log(result);
+        if (result==0){
+            window.location.href = window.location.href+'/third_ending'
+        } else if (result==1){
+            window.location.href = window.location.href+'/first_ending'
+        } else if (result==2){
+            window.location.href = window.location.href+'/second_ending'
+        } else {
+            window.location.href = window.location.href+'/whaet?'
+        }
     }
 
     function button_please_work() {
@@ -71,7 +82,7 @@ function page() {
                 let result=evalscore();
                 console.log("bloop");
                 console.log("b"+result);
-                reroute();
+                reroute(result);
             }
             
             update_text();
@@ -82,8 +93,8 @@ function page() {
 
     
     return( 
-        <div className="row"> 
-        <div className="col">
+    <div className="fill">
+    <div className="background col">
             {/* <img scr=" "> */}
             <h3 className="question">{questions[0][0]}</h3>
             <div className="row">
@@ -96,9 +107,9 @@ function page() {
                 <input type="radio" name="options" onClick={()=>{answer=3}}></input> 
                 <p className="three">{questions[0][3]}</p>
             </div>
-        </div>
-        <div className="fire-btn hii" onClick={button_please_work} >bloop</div>
-        </div>
+        <div className="fire-btn hii" onClick={button_please_work} >Next Question!!</div>
+    </div>
+    </div>
     )
 };
 
