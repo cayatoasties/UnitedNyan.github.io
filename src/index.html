@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime.js Move Box</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap" rel="stylesheet">
+<!-- Anime.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<style>
+        /* cats animation */
+        .cat1 {
+    width: 500px;
+    height: auto;
+    position: relative;  /* or absolute */
+    left: 500;
+    top: 0;
+}
+        .cat2 {
+    width: 500px;
+    height: auto;
+    position: relative;
+    left: 100;
+    top: 100px;
+}
+
+        .cat3 {
+    width: 500px;
+    height:auto;
+    position: relative;
+    left: 200;
+    top: 100;        
+}
+
+.cat4 {
+    width: 200px;
+    height:200px;
+    position: relative;
+    left: 500;
+    top: 100;        
+}
+
+.cat5 {
+    width: 300px;
+    height:auto;
+    position: relative;
+    left: 200;
+    top: 300;        
+}
+
+.cat6 {
+    width: 500px;
+    height:auto;
+    position: relative;
+    left: 600;
+    top: 100;        
+}
+
+    
+.container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: #f7edf0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #f4afab;
+            color: #5b4636;
+            border: none;
+            border-radius: 6px;
+            cursor: url"cursor1.png";
+        }
+
+        button:hover {
+            background: #f4eea9;
+        }
+
+        /* Profile popup */
+        .modal {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            background: #f4cbc6;
+        }
+
+    </style>
+
+    
+</head>
+
+<body>
+    
+    
+ <div class = "sour-gummy-uniquifier">  
+    <nav class="navbar">
+        <ul>
+            <h1 class ="title">United Nyan </h1>
+            <li><a href="/home" class="active">home</a></li>
+            <li><a href="/quiz">quiz</a></li>
+            <li><a href="/login">login</a></li>
+        </ul>
+    </nav>
+ </div> 
+    <img src="cat5.png" class="cat5" id="cat5">
+    <img src= "cat2.png" class="cat2" id="cat2">
+    <div class="col">
+        <img src="cat1.png" class="cat1" id="cat1">
+        <img src="saturn.png" width = 500 class="saturn">
+        <img src="pinkglitter.png" width = 200> <img src="pinkglitter.png" width = 500> 
+        <img src="yellowglitter.png" width = 300>
+    </div>    
+        
+            <div class="sour-gummy-uniquifier">
+            <h2 class = "heading"> meet your fellow cats</h2>
+                <div class ="row">
+                    <img src="cat4.png" class="cat4" id="cat4">
+                     <img src="cat6.png" class="cat6" id="cat6">
+                    <img src="brownpaw.png" >
+                </div>
+            
+            </div>
+        
+
+        
+    <div>
+        
+        
+    </div>
+
+    <div>
+       
+        
+    </div>
+
+    <div>
+       
+       
+    </div>
+<div class="sour-gummy-uniquifier"   >
+<h1>our cat community</h1>
+
+    <div class="container">
+
+        <!-- USER 1 -->
+        <div class="card">
+            <img src="cat1.png">
+            <h3>saylor twift</h3>
+            <button onclick="showProfile('saylor_twift1', 'happycat')">view profile</button>
+        </div>
+
+        <!-- USER 2 -->
+        <div class="card">
+            <img src="cat2.png">
+            <h3>justin case</h3>
+            <button onclick="showProfile('just_in_case', 'sadcat')">view profile</button>
+        </div>
+
+        <!-- USER 3 -->
+        <div class="card">
+            <img src="cat3.png">
+            <h3>walter melon</h3>
+            <button onclick="showProfile('not_a_fruit', 'happycat')">view profile</button>
+        </div>
+
+        <!-- USER 4 -->
+        <div class="card">
+            <img src="cat4.png">
+            <h3>ben dover</h3>
+            <button onclick="showProfile('ben', 'evilcat')">view profile</button>
+        </div>
+
+        <!-- USER 5 -->
+        <div class="card">
+            <img src="cat5.png">
+            <h3>chris p bacon</h3>
+            <button onclick="showProfile('food!!', 'sadcat')">view profile</button>
+        </div>
+
+    </div>
+</div>    
+
+    <!-- POPUP -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <h2 id="profileName"></h2>
+            <p><strong>cat tag:</strong> <span id="profileTag"></span></p>
+            <button class="close-btn" onclick="closeProfile()">close</button>
+        </div>
+    </div>
+
+    <script>
+        function showProfile(name, tag) {
+            document.getElementById("profileName").innerText = name;
+            document.getElementById("profileTag").innerText = tag;
+            document.getElementById("profileModal").style.display = "flex";
+        }
+
+        function closeProfile() {
+            document.getElementById("profileModal").style.display = "none";
+        }
+    </script>
+
+    <img src="cat3.png" class="cat3" id="cat3">
+     <img src="rocket.png" class="rocket"> 
+
+    <script src="main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+.sour-gummy-uniquifier {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+    background-image: linear-gradient(45deg, #f4cbc6, #f4eea9);
+    height: 1000vh;
+
+    /*cursor*/
+    cursor: url("cursor1.png"), auto; 
+    
+
+    
+    }
+
+.heading {
+    border-color: #5b4636;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+}    
+
+
+
+ .saturn {
+    opacity: 0.4;
+    
+ }
+
+ .rocket {
+    opacity: 0.7;
+    left: 100;
+    top: 100
+ }
+
+
+h1 {
+
+    padding-top: 700;
+    text-align: left;
+    font-size: xx-large;
+    border-bottom: #5b4636;
+    background-color: #f4cbc6;
+
+
+}
+
+h1, p, div {
+    /*cursor*/
+    cursor: url("cursor2.png"), auto;
+}
+
+.title {
+    text-align: left;
+    display: flex;
+    justify-content: left;
+}
+
+ul {
+    list-style-type: none; /* Removes the bullet points */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Contains the floats if using float method */
+}
+
+/* Style the navigation container */
+.navbar {
+    background-color: #f4cbc6; /* Dark background color */
+    color: #5b4636;
+    padding: 0 10px;
+}
+
+/* Use Flexbox on the <ul> to align list items horizontally */
+.navbar ul {
+    display: flex;
+    justify-content: right; 
+}
+
+
+.navbar li a {
+    display: block; /* Makes the entire area clickable and allows padding/margin */
+    color: #5b4636;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: bold; /* Removes the default underline */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Change the color of links on hover */
+.navbar li a:hover:not(.active) {
+    background-color: #f4f482;
+}
+
+/* Add a color to the active/current link */
+.navbar li a.active {
+    background-color: #f4afab;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+table, th, td {
+    border: 3px
+}
+
